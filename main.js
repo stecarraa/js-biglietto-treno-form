@@ -39,6 +39,7 @@ checkPrice.addEventListener('click',function(){
     } else {
         message = 'Non hai diritto a sconti, ti tocca pagare : '
         document.getElementById('offer').innerHTML ='Biglietto Prezzo Intero';
+        document.getElementById('price').innerHTML =price.toFixed(2) + '€';
     }
     message = message + price.toFixed(2) + '€'
 console.log(message);
