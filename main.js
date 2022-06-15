@@ -16,18 +16,21 @@ const checkPrice =document.getElementById('checkPrice')
 
 
 
-if (userAge < 18){
-    price = price - ((price * 15) / 100);
-    message = 'Essendo un minore hai diritto allo sconro del 15%! il prezzo del tuo biglietto è: ';
-} else if (userAge > 65){
-    price = price - ((price * 35) / 100);
-    message = 'Essendo un veterano hai diritto allo sconro del 35%! il prezzo del tuo biglietto è: ';
-} else {
-    message = 'Non hai diritto a sconti, ti tocca pagare : '
-}
+
 
 checkPrice.addEventListener('click',function(){
-    message = message + price.toFixed(2) + '€'
 
+    if (userAge < 18){
+        price = price - ((price * 15) / 100);
+        message = 'Essendo un minore hai diritto allo sconro del 15%! il prezzo del tuo biglietto è: ';
+    } else if (userAge > 65){
+        price = price - ((price * 35) / 100);
+        message = 'Essendo un veterano hai diritto allo sconro del 35%! il prezzo del tuo biglietto è: ';
+    } else {
+        message = 'Non hai diritto a sconti, ti tocca pagare : '
+    }
+    message = message + price.toFixed(2) + '€'
+console.log(message);
 })
+
 
