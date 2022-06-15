@@ -8,8 +8,7 @@
 // va applicato uno sconto del 35% per gli over 65.
 
 
-let userAge = document.getElementById ("userAge");
-let price = document.getElementById ("distance") * 0.26;
+
 
 const checkPrice =document.getElementById('checkPrice')
 
@@ -19,6 +18,9 @@ const checkPrice =document.getElementById('checkPrice')
 
 
 checkPrice.addEventListener('click',function(){
+
+    let userAge =parseInt( document.getElementById("userAge").value);
+    let price =parseInt (document.getElementById("distance").value) * 0.26;
 
     if (userAge < 18){
         price = price - ((price * 15) / 100);
